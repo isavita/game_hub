@@ -1,12 +1,17 @@
 table.table.table-hover
   thead
     tr.info
-      th ID
-      th Name
-      th Age
+      th = 'ID'
+      th = 'Email'
+      th = 'First Name'
+      th = 'Middle Name'
+      th = 'Last Name'
+      th = 'Age'
   tbody
     tr
       td = @user.id
-      td = @user.name
+      td = @user.email
+      td = @user.first_name
+      td = @user.middle_name
+      td = @user.last_name
       td = @user.age
-

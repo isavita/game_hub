@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  root to: 'users/sign_up#new'
+  devise_for :admins
+
+  devise_scope :user do
+    get 'sign_up', to: 'devise/registrations#new'
+    get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_out', to: 'devise/sessions#destroy'
+  end
+
+  root to: 'home#index'
+
+  resource :after_sign
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
