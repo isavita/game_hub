@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   devise_for :admins
 
   devise_scope :user do
     get 'sign_up', to: 'devise/registrations#new'
     get 'sign_in', to: 'devise/sessions#new'
     get 'sign_out', to: 'devise/sessions#destroy'
+
+    authenticated :user do
+      root to: 'new_after_signup#new'
+    end
+
+    unauthenticated :user do
+      root to: 'devise/registrations#new', as: :unauthenticated_root
+    end
   end
 
-  root to: 'home#index'
-
-  resource :after_sign
+  resource :after_signup
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

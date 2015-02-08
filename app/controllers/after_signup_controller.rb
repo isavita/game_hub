@@ -7,7 +7,9 @@ class AfterSignupController < ApplicationController
     @user = current_user
     case step
     when :personal_info
+      @user.update_attributes(params[:user])
     when :nickname      
+
     end
     render_wizard
   end
