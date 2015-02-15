@@ -1,0 +1,8 @@
+p = 'Personal Information'
+= simple_form_for current_user, url: wizard_path, html: { class: 'form-horizontal' } do |form|
+  = form.input :first_name
+  = form.input :middle_name
+  = form.input :last_name
+  = form.input :age
+  = form.button :submit, 'Submit'
+= link_to 'skip', next_wizard_path

@@ -1,0 +1,23 @@
+.bs-component
+  nav.navbar.navbar-inverse
+    .container-fluid
+      div.navbar-header
+        a.navbar-brand href="#" GameHub                
+      .collapse.navbar-collapse#bs-example-navbar-collapse-2
+        ul.nav.navbar-nav   
+          li
+            = link_to 'Profile', '#'
+          li.dropdown
+            button.btn.btn-default.dropdown-toggle type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"
+              | Games
+              span.caret
+            ul.dropdown-menu role="menu"
+              li
+                a href="#" Action                
+        form.navbar-form.navbar-left role="search"
+          div.form-group
+            input.form-control type="text" placeholder="Search"
+          button.btn.btn-default type="submit" Submit
+        ul.nav.navbar-nav.navbar-right
+          li          
+            = link_to 'Sing Out', sign_out_path 
