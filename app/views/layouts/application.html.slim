@@ -4,10 +4,10 @@ html
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     title Game Hub
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    / = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    - if current_user.blank?
+    - unless current_user.blank?
       = render 'home/header'
 
     p.notice = notice

@@ -1,2 +1,5 @@
 p = 'Nickname'
-= link_to 'skip', next_wizard_path
+= render layout: 'form' do |form|
+  = form.input :nickname
+  = form.input :clan
+= link_to 'previous', previous_wizard_path, class: 'btn-lg btn-success'

@@ -1,0 +1,3 @@
+= simple_form_for current_user, url: wizard_path, html: { class: 'form col-sm-10' } do |form|
+  = yield form  
+  = form.button :submit, 'Save'
