@@ -7,9 +7,7 @@ class AfterSignupsController < ApplicationController
     @user = current_user
     case step
     when :personal_info
-      #@user.update_attributes(params[:user])
     when :nickname      
-
     end
     render_wizard
   end
@@ -23,6 +21,6 @@ class AfterSignupsController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :middle_name, :last_name, :age)
+    params.require(:user).permit(:first_name, :middle_name, :last_name, :age, :nickname, :clan, :avatar)
   end
 end

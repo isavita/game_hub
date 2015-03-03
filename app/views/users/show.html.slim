@@ -7,6 +7,9 @@ table.table.table-hover
       th = 'Middle Name'
       th = 'Last Name'
       th = 'Age'
+      th = 'Nickname'
+      th = 'Clan'
+      th = 'Avatar'
   tbody
     tr
       td = @user.id
@@ -15,3 +18,6 @@ table.table.table-hover
       td = @user.middle_name
       td = @user.last_name
       td = @user.age
+      td = @user.nickname
+      td = @user.clan
+      td = image_tag @user.avatar.url(:thumb)

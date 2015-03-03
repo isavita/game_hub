@@ -1,5 +1,6 @@
 p = 'Nickname'
 = render layout: 'form' do |form|
   = form.input :nickname
+  = form.file_field :avatar
   = form.input :clan
 = link_to 'previous', previous_wizard_path, class: 'btn-lg btn-success'
