@@ -3,14 +3,31 @@ html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     title Game Hub
+    meta name="viewport" content=("width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     / = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
     - unless current_user.blank?
-      = render 'home/header'
+      / = render 'home/header'
+    
+    header.container-fluid
+          h1 = "Header"
 
-    p.notice = notice
-    p.alert = alert
+    .container-fluid  
 
-    = yield
+      section.col-sm-9.col-sm-push-3.col-md-8.col-md-push-2
+        p.notice = notice
+        p.alert = alert  
+        h1 = "section"
+
+        = yield
+
+      aside.col-sm-3.col-sm-pull-9.col-md-2.col-md-pull-8
+        h1 = "Left aside"
+
+      aside.top-players-list.col-xs-12.col-md-2
+        h1 = "Right aside"   
+
+    footer.container-fluid
+      h1 = "Footer"

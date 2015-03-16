@@ -1,7 +1,46 @@
 body {
-  background-image:url("/images/main_dark_background.jpg");
+  background-image: url("/images/main_dark_background.jpg");
+  font-family: "Open Sans", sans-serif;
 }
 
+section, aside, footer, header {
+  border: 1px solid yellow;
+}
+
+p {
+  color: brown;
+}
+
+header, footer {
+  color: #ddd;
+  text-align: center;
+}
+
+.top-players-list {
+  background-color: lightblue;
+}
+/*
 .table-hover tbody tr:hover td {
   background-color: #dff0d8;
 }
+
+.container#wrapper {
+  min-height: 100% !important;
+  height: 100% !important;
+  margin: 0 auto -33px;
+  border: 1px solid yellow;
+}
+
+aside, section {
+  border: 2px solid green;
+}
+
+footer {
+    border: 1px solid blue;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+*/
