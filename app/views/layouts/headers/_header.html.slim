@@ -6,14 +6,9 @@
       .collapse.navbar-collapse#bs-example-navbar-collapse-2
         ul.nav.navbar-nav   
           li
-            = link_to 'Profile', after_signups_path
+            = link_to 'Profile', edit_user_path(current_user)
           li.dropdown
-            button.btn.btn-default.dropdown-toggle type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"
-              | Games
-              span.caret
-            ul.dropdown-menu role="menu"
-              li
-                a href="#" Action                
+            = link_to 'Games', root_path              
         ul.nav.navbar-nav.navbar-right
           li          
             = link_to 'Sing Out', sign_out_path 

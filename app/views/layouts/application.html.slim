@@ -8,26 +8,29 @@ html
     / = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    - unless current_user.blank?
-      / = render 'home/header'
+    / TODO: Remove this check and move home page and the how another part in different layouts 
+    - if user_signed_in?
+      = render 'layouts/headers/header'
     
-    header.container-fluid
-          h1 = "Header"
+      header.container-fluid
+            h1 = "Header"
 
-    .container-fluid  
+      .container-fluid  
 
-      section.col-sm-9.col-sm-push-3.col-md-8.col-md-push-2
-        p.notice = notice
-        p.alert = alert  
-        h1 = "section"
+        section.col-sm-9.col-sm-push-3.col-md-8.col-md-push-2
+          p.notice = notice
+          p.alert = alert  
+          h1 = "section"
 
-        = yield
+          = yield
 
-      aside.col-sm-3.col-sm-pull-9.col-md-2.col-md-pull-8
-        h1 = "Left aside"
+        aside.col-sm-3.col-sm-pull-9.col-md-2.col-md-pull-8
+          h1 = "Left aside"
 
-      aside.top-players-list.col-xs-12.col-md-2
-        h1 = "Right aside"   
+        aside.top-players-list.col-xs-12.col-md-2
+          h1 = "Right aside"   
 
-    footer.container-fluid
-      h1 = "Footer"
+      footer.container-fluid
+        h1 = "Footer"
+    - else
+      = render 'homepages/homepage'

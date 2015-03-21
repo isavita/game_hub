@@ -9,19 +9,27 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'devise/sessions#new'
     get 'sign_out', to: 'devise/sessions#destroy'
 
-    authenticated :user do
-      root to: 'home#index'
-    end
-
     unauthenticated :user do
       root to: 'devise/registrations#new', as: :unauthenticated_root
     end
   end
 
+  authenticated :user do
+    root to: 'homepages#index', as: :authenticated_root
+  end
+
+  root 'homepages#homepage'
+
   resources :after_signups
 
   resources :chat
   resources :users
+  resources :games
+
+  resource :homepage, only: [:index] do
+    get :homepage
+  end
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
