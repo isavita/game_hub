@@ -1,0 +1,12 @@
+
+= render 'user/account_settings/nav'
+
+= simple_form_for(@user, as: :user, url: update_profile_info_user_account_settings_path, html: { class: 'form-horizontal', multipart: true }, method: :put) do |form|
+  .form-group
+    img src= @user.avatar.url(:thumb)
+    = form.file_field :avatar
+  .form-group
+    = form.input :nickname 
+  .form-group
+    = form.input :clan
+  = form.submit

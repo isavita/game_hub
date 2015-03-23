@@ -1,0 +1,13 @@
+
+= render 'user/account_settings/nav'
+
+= simple_form_for(@user, as: :user, url: update_personal_info_user_account_settings_path, method: :put) do |form|
+  .form-group
+    = form.input :first_name
+  .form-group
+    = form.input :middle_name
+  .form-group
+    = form.input :last_name
+  .form-group
+    = form.input :age
+  = form.submit

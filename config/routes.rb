@@ -26,8 +26,21 @@ Rails.application.routes.draw do
   resources :users
   resources :games
 
+
   resource :homepage, only: [:index] do
     get :homepage
+  end
+  
+  namespace :user do
+    resources :account_settings, only: [] do
+      collection do
+        get :edit_personal_info
+        get :edit_profile_info
+
+        put :update_personal_info
+        put :update_profile_info
+      end
+    end
   end
 
   # You can have the root of your site routed with "root"

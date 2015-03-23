@@ -14,7 +14,9 @@ gem 'wicked'
 gem 'simple_form'
 gem 'country_select'
 gem 'websocket-rails'
-gem "paperclip", "~> 4.2"
+gem 'paperclip', '~> 4.2'
+gem 'rails-i18n', '~> 4.0.0'
+gem 'activeadmin', github: 'activeadmin'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
