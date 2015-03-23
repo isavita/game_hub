@@ -1,46 +1,24 @@
+@import "global_variables";
+
 body {
   background-image: url("/images/main_dark_background.jpg");
   font-family: "Open Sans", sans-serif;
+  color: $main-text-color;
 }
 
 section, aside, footer, header {
-  border: 1px solid yellow;
+  border: 1px solid $yellow;
 }
 
-p {
-  color: brown;
+p, label {
+  color: $main-text-color;
 }
 
 header, footer {
-  color: #ddd;
+  color: $white;
   text-align: center;
 }
 
 .top-players-list {
-  background-color: lightblue;
+  background-color: $green;
 }
-/*
-.table-hover tbody tr:hover td {
-  background-color: #dff0d8;
-}
-
-.container#wrapper {
-  min-height: 100% !important;
-  height: 100% !important;
-  margin: 0 auto -33px;
-  border: 1px solid yellow;
-}
-
-aside, section {
-  border: 2px solid green;
-}
-
-footer {
-    border: 1px solid blue;
-    padding-top: 60px;
-    padding-bottom: 0px;
-    position:fixed;
-    bottom:0;
-    width:100%;
-}
-*/
