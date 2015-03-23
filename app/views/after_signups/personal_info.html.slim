@@ -4,4 +4,5 @@ p = 'Personal Information'
   = form.input :middle_name
   = form.input :last_name
   = form.input :age
+  = form.input :country_code, as: :country, priority: ['BG', 'GB', 'US']
 = link_to 'next', next_wizard_path, class: 'btn-lg btn-success'

@@ -10,4 +10,6 @@
     = form.input :last_name
   .form-group
     = form.input :age
+  .form-group
+    = form.input :country_code, as: :country, priority: ['BG', 'GB', 'US']
   = form.submit
