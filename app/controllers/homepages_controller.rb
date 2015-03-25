@@ -3,6 +3,6 @@ class HomepagesController < ApplicationController
   end
 
   def index
-    root_path unless user_signed_in?
+    redirect_to :homepage unless user_signed_in?
   end
 end

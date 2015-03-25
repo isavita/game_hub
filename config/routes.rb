@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get 'sign_up', to: 'devise/registrations#new'
-    get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_in', to: 'devise/sessions#create'
     get 'sign_out', to: 'devise/sessions#destroy'
 
     unauthenticated :user do
