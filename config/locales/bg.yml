@@ -1,0 +1,18 @@
+bg:
+  activerecord:
+    models:
+      user:
+        one: Потребител
+        other: Потребители
+      game:
+        one: Игра
+        other: Игри
+
+    attributes:
+      user:
+        first_name: Лично име
+        middle_name: Бащино име
+        last_name: Фамилно име
+        age: Възраст
+        country_code: Държава
+        clan: Клан
