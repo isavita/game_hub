@@ -1,0 +1,5 @@
+.row
+  .games-list
+    = render partial: 'game', collection: @games
+  #game-app
+    = link_to 'Paint it white', '#', remote: true

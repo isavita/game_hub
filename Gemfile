@@ -19,11 +19,14 @@ gem 'rails-i18n'
 gem 'activeadmin', github: 'activeadmin'
 gem 'faker'
 gem 'seedbank'
+gem 'react-rails', '0.13.0.0'
+gem 'sprockets-coffee-react'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

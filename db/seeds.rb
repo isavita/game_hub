@@ -11,7 +11,7 @@ Game.delete_all
 
 10.times do |i|
   User.create(first_name: Faker::Name.first_name,
-    middle_name: Faker::Name.parent_name,
+    middle_name: Faker::Name.last_name,
     last_name: Faker::Name.last_name,
     age: Faker::Number.number(2),
     email: "user#{i}@example.com",
@@ -25,8 +25,9 @@ end
 
 user_count = User.count
 5.times do |i|
-  Game.create(name: Faker::Name,
-    user_id: User.offset(user_count - 1).first.id,
+  Game.create(name: Faker::Name.name,
+    user_id: User.offset(user_count - 1).first.id,    
+    avatar: Faker::Avatar.image,
     rank: Faker::Number.number(1),
     producer: Faker::Lorem.word,
     state: GameStates[(i < 3 ? :published : :draft)],

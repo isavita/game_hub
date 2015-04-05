@@ -1,4 +1,6 @@
 bg:
+  homepage:
+    topgames: Популярни игри
   activerecord:
     models:
       user:
@@ -10,9 +12,22 @@ bg:
 
     attributes:
       user:
+        id: ID
         first_name: Лично име
         middle_name: Бащино име
         last_name: Фамилно име
         age: Възраст
         country_code: Държава
+        nickname: Прякор
         clan: Клан
+        avatar: Снимка
+  users:
+    id: ID
+    first_name: Лично име
+    middle_name: Бащино име
+    last_name: Фамилно име
+    age: Възраст
+    country_code: Държава
+    nickname: Прякор
+    clan: Клан
+    avatar: Снимка

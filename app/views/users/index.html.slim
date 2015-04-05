@@ -1,15 +1,17 @@
 table.table.table-hover
   thead  
     tr.info
-      th ID
-      th First Name
-      th Middle Name
-      th Last Name
-      th Age
+      th = t('users.id')
+      th = t('users.avatar')
+      th = t('users.first_name')
+      th = t('users.middle_name')
+      th = t('users.last_name')
+      th = t('users.age')
   tbody
     - @users.each do |user|
       tr
         td = user.id
+        td = image_tag user.avatar.url(:thumb)
         td = user.first_name
         td = user.middle_name
         td = user.last_name

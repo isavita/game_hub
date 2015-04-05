@@ -1,0 +1,13 @@
+article.col-lg-3.col-md-4.col-sm-6
+  .entry-thumbnail
+    = link_to game, ramote: true do
+      = image_tag(game.avatar.url(:thumb), alt: game.name, class: ['img-circle', 'game-avatar-preview'])
+      .caption
+        h4 = game.name
+      .genre
+        h5 = game.genre
+      .ranks-group
+        - game.rank.times do |index|
+          span.glyphicon.glyphicon-star
+
+

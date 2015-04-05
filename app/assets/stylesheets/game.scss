@@ -1,0 +1,14 @@
+@import "global_variables";
+
+.entry-thumbnail {
+  border: 1px solid $white;
+  margin: 10px;
+  .game-avatar-preview {
+    border: 1px solid $yellow;
+  }
+  .ranks-group {
+    .glyphicon-star {
+      color: yellow
+    }
+  }
+}

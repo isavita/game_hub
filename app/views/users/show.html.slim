@@ -1,18 +1,19 @@
 table.table.table-hover
   thead
     tr.info
-      th = 'ID'
-      th = 'Email'
-      th = 'First Name'
-      th = 'Middle Name'
-      th = 'Last Name'
-      th = 'Age'
-      th = 'Nickname'
-      th = 'Clan'
-      th = 'Avatar'
+      th = t('users.id')
+      th = t('users.email')
+      th = t('users.first_name')
+      th = t('users.middle_name')
+      th = t('users.last_name')
+      th = t('users.age')
+      th = t('users.nickname')
+      th = t('users.clan')
+      th = t('users.avatar')
   tbody
     tr
       td = @user.id
+      td = image_tag @user.avatar.url(:thumb)
       td = @user.email
       td = @user.first_name
       td = @user.middle_name
@@ -20,4 +21,3 @@ table.table.table-hover
       td = @user.age
       td = @user.nickname
       td = @user.clan
-      td = image_tag @user.avatar.url(:thumb)
